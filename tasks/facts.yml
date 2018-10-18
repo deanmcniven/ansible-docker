@@ -1,0 +1,7 @@
+---
+- name: Get ubuntu release
+  become: false
+  command: lsb_release -cs
+  register: ubuntu_release
+  changed_when: false
+

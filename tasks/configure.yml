@@ -1,0 +1,9 @@
+---
+- name: Copy docker daemon config
+  become: true
+  notify: Restart Docker Daemon
+  template:
+    src: docker_daemon.j2
+    dest: /etc/docker/daemon.json
+    mode: 0644
+

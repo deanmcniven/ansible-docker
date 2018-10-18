@@ -1,0 +1,7 @@
+{
+  "dns": {{ docker_dns_servers | to_json }}
+{% if docker_dns_search is defined %}
+,
+  "dns-search": {{ docker_dns_search | to_json }}
+{% endif %}
+}
