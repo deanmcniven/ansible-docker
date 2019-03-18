@@ -7,10 +7,13 @@
 
 - name: Install repository
   become: true
+  vars:
+    repo_url: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ubuntu_release.stdout }} stable"
   apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ubuntu_release.stdout }} stable
+    repo: "{{ repo_url }}"
     state: present
     update_cache: yes
+  when: repo_url not in apt_sources
 
 - name: Create docker group
   become: true

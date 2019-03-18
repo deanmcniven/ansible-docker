@@ -14,3 +14,6 @@ dependencies:
   - name: set-user-facts
     src: https://github.com/deanmcniven/ansible-set-user-facts.git
     version: origin/master
+  - name: set-apt-facts
+    src: https://github.com/deanmcniven/ansible-set-apt-facts.git
+    version: origin/master
