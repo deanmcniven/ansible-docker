@@ -1,3 +1,4 @@
 ---
+docker_create_docker_conf: true
 docker_dns_servers:
   - 8.8.8.8
